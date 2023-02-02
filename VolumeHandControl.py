@@ -16,7 +16,6 @@ pTime = 0
 
 detector = htm.handDetector(detectionCon=0.75)
 
-
 devices = AudioUtilities.GetSpeakers()
 interface = devices.Activate(
     IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
@@ -30,7 +29,6 @@ maxVol = volumeRange[1]
 vol = 0
 volBar = 400
 volPer = 0
-
 
 
 while True:
@@ -74,7 +72,6 @@ while True:
     pTime = cTime
 
     cv2.putText(img, f'FPS: {int(fps)}', (40,40), cv2.FONT_HERSHEY_COMPLEX, 1, (255,0,0), 3)
-
 
     cv2.imshow("Img",img)
     cv2.waitKey(1)
